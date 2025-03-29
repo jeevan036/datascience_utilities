@@ -56,7 +56,7 @@ class DataPreprocessor:
 
             # One-Hot Encoding using pandas get_dummies
             self.data = pd.get_dummies(self.data, columns=cat_cols, drop_first=True)
-            print("Categorical variables encoded successfully.")
+            print("Categorical variables encoded successfully")
         else:
             print("No data to process.")
 
