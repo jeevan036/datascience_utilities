@@ -1,0 +1,50 @@
+# Machine Learning Utility
+
+This is a simple machine learning utility that trains a linear regression model using `scikit-learn`, normalizes the input data, and saves the trained model for future predictions.
+
+## Features
+- Uses `LinearRegression` from `sklearn`
+- Normalizes input features using `StandardScaler`
+- Saves and loads the model using `joblib`
+
+## Requirements
+Ensure you have the following Python packages installed:
+```sh
+pip install numpy scikit-learn joblib
+```
+
+## Usage
+
+### Training and Saving the Model
+The script trains a linear regression model using a given dataset (NumPy arrays for input `X` and target `y`) and saves it as a `.pkl` file.
+
+```python
+import numpy as np
+from ml_util import train_and_save_model
+
+X = np.array([[1, 2], [2, 3], [3, 4], [4, 5]])
+y = np.array([2, 3, 4, 5])
+
+train_and_save_model(X, y)
+```
+
+### Loading the Model and Making Predictions
+Once the model is trained and saved, you can load it and make predictions as follows:
+
+```python
+from ml_util import load_model_and_predict
+
+prediction = load_model_and_predict("model.pkl", [2, 3])
+print(f"Predicted value: {prediction}")
+```
+
+## File Structure
+```
+/
+├── ml_util.py   # Machine learning utility script
+├── README.md    # Documentation file
+```
+
+## License
+This project is licensed under the MIT License.
+
