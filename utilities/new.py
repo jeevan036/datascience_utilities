@@ -7,7 +7,7 @@ def is_perfect_square(n):
     
     return root * root == n
 
-test_numbers = [0, 1, 4, 9, 16, 25, 36, 49, 50, 100, -4]
+test_numbers = [0, 1, 4, 9, 16, 25, 36, 49, 5, 100, -4]
 
 for num in test_numbers:
     if is_perfect_square(num):
